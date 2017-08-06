@@ -1,0 +1,102 @@
+header{
+  background-color: lightblue;
+  min-height: 150px;
+}
+
+header.row div{
+  float: left;
+}
+
+.fa-cog{
+  font-size: 120px;
+}
+
+.navbar{
+  margin-bottom: 0;
+}
+
+/*The Right Side of thw NAV Bar Welcome, guest*/
+.navbar-right{
+  /*padding-top: 0px;*/
+}
+
+.jumbotron{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.jumbotron .image{
+  min-height: 350px;
+  background: url('../img/slider.jpg') no-repeat 0;
+}
+
+.image p{
+  color: #dddddd;
+  font-size: 20px;
+  padding-top: 320px;
+  margin-bottom: 5px;
+}
+
+.notice .panel{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  min-height: 350px;
+}
+
+
+.list-group-header{
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: monospace;
+  color: #555555;
+}
+
+.section1,
+.section1 .list-group-item{
+  background-color: #eeeedd;;
+  border: 0;
+}
+
+.section2{
+  padding-top: 15px;
+}
+
+.section2,
+.section2 .list-group-item{
+  background-color: #222222;
+  border: 0;
+}
+
+.section2 img{
+  height: 200px;
+  width: 200px;
+}
+
+footer{
+  background-color: #222222;
+  color: #dddddd;
+  padding: 20px;
+}
+
+
+
+/*
+
+Login Page form CSS
+
+*/
+.form-group{
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+.form-group div{
+  margin-bottom: 5px;
+}
+
+.help-block{
+  float: right;
+}
