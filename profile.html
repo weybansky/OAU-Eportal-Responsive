@@ -65,8 +65,18 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 profile-menu">
-            <h3>Profile Menu</h3><br>
-            <ul class="nav">
+            <h3>
+              Profile Menu
+              <small id=show-profile-links role="button" class="show-profile-links">
+                <button type="button" data-toggle="collapse" data-target="#profile-links" aria-expanded="false">
+                  <span class="icon-bar">show links</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </small>
+            </h3><br>
+            <ul id="profile-links" class="nav profile-links">
               <li><a href="#" class="">Profile Page</a></li>
               <li><a href="#" class="">Health Centre Registration</a></li>
               <li><a href="#">Teaching Assessment</a></li>
@@ -90,7 +100,7 @@
               <li><a href="#" class="">Documentations</a></li>
               <li><a href="#" class="">Contact Councellor</a></li>
               <li><a href="#" class="">Change Password</a></li>
-              <li><a href="#" class="">Sign out</a></li>
+              <li><a href="login.html" class="">Sign out</a></li>
               <br>
             </ul>
           </div>
@@ -172,5 +182,7 @@
     <script src="js/jquery.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="js/bootstrap.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/eportal.js"></script>
   </body>
 </html>

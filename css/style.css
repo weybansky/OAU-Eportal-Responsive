@@ -70,6 +70,11 @@ header.row div{
   border: 0;
 }
 
+.section2 a:hover{
+  color: #dddddd;
+  text-decoration: none;
+}
+
 .section2 img{
   height: 200px;
   width: 200px;
@@ -91,10 +96,15 @@ Login Page form CSS
 .form-group{
   padding: 20px 10px;
   margin-bottom: 20px;
+
 }
 
 .form-group div{
   margin-bottom: 5px;
+}
+
+.form-control{
+  height: 45px;
 }
 
 .help-block{
@@ -129,6 +139,9 @@ Profile Page CSS
   border: 1px solid;
   border-radius: 10px;
 }
+.show-profile-links{
+  display: none;
+}
 
 .profile-content{
 
@@ -158,4 +171,17 @@ Profile Page CSS
   line-height: 1.5;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+/* Media Queries */
+@media(max-width: 991px){
+  .profile-links{
+    display: none;
+  }
+  .show-profile-links{
+    display: block;
+    float: right;
+    margin-right: 30px;
+  }
+
 }
