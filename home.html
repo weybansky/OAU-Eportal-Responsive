@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Obafemi Awolowo university Portal - Home</title>
+
+  <!-- Styleheets -->
+  <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<link rel="icon" href="img/oaulogo.png" type="image/png" sizes="16x16">
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row desktop">
+				<div class="col-md-2 col-sm-2">
+					<img src="img/oaulogo.png" alt="OAU LOGO" class="logo">
+				</div>
+				<div class="col-md-10 col-sm-10">
+					<span class="sitename">
+						Obafemi Awolowo University Student
+						<br>
+						Information Portal
+					</span>
+				</div>
+			</div>
+
+			<div class="row mobile">
+				<div class="col-xs-12">
+					<a role="button" href="#menu" onclick="open_menu()" class="btn pull-left btn-primary">
+						<i class="fas fa-bars"></i>
+					</a>
+					
+					<ul class="pull-right">
+						<li><a role="button" href="login.html" class="btn btn-warning">Login</a></li>
+					</ul>
+					
+					<div>
+						<a href="home.html">
+							<img src="img/oaulogo.png" alt="" class="">
+							<span class="sitename">OAU</span>
+						</a>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="desktop navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="home.html">Home</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Students <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="login.html">Undergraduate</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="login.html">Postgraduate</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="login.html">Executive MBA</a></li>
+	          </ul>
+	        </li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staff <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="login.html">Staff Login</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Bursary</a></li>
+	          </ul>
+	        </li>
+	        <li><a href="faq.html">FAQs</a></li>
+	        <li><a href="contact.html">Contact Us</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome guest <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li role="separator" class="divider"></li>
+	            <!-- This is displayed when not logged in -->
+	            <li><a href="login.html">Login</a></li>
+	            <!-- This is displayed when logged in -->
+	            <li><a href="login.html">Sign Out</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	
+	<nav id="mobile_menu" class="mobile">
+		<div class="container">
+			<div class="row">
+				<div class="">
+					<p class="nav_top">
+						<span">Menu</span>
+						<span class="close_button">
+							<a href="#" onclick="close_mobile_menu()">
+								<i class="fas fa-times"></i>
+							</a>
+						</span>
+					</p>
+					<!-- this is displayed when not logged in -->
+					<ul class="links logged_out">
+						<li><a href="home.html">Home</a></li>
+						<li>
+            	<a href="#" class="" onclick="drop_menu()">Students <span class="fas fa-chevron-right pull-right"></span></a>
+							<ul id="drop" class="drop">
+								<li><a href="login.html">Undergraduate</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="login.html">Postgraduate</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="login.html">Executive MBA</a></li>
+							</ul>
+            </li>
+            <li>
+            	<a href="#" class="" onclick="drop_menu()">Staff <span class="fas fa-chevron-right pull-right"></span></a>
+							<ul id="drop" class="drop">
+								<li><a href="">Payment via Remita</a></li>
+								<li><a href="">View Payment Status</a></li>
+								<li><a href="">Download Payment Slip for Cash Office</a></li>
+							</ul>
+            </li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+
+            <li class="login"><a href="login.html">Login <i class="fas fa-sign-in-alt"></i></a></li>
+					</ul>
+					<!-- This is displayed when logged in -->
+					<!-- <ul class="links logged_in">
+						<li><a href="profile.html" class="">Profile Page</a></li>
+            <li><a href="#" class="">Health Centre Registration</a></li>
+            <li><a href="#">Teaching Assessment</a></li>
+            
+            <li>
+            	<a href="#" class="" onclick="drop_menu()">Payment Activities <span class="fas fa-chevron-right pull-right"></span></a>
+							<ul id="drop" class="drop">
+								<li><a href="">Payment via Remita</a></li>
+								<li><a href="">View Payment Status</a></li>
+								<li><a href="">Download Payment Slip for Cash Office</a></li>
+							</ul>
+            </li>
+            
+            <li><a href="#" class="">Complete Certificate Form</a></li>
+            <li><a href="#" class="">Online Screening</a></li>
+            <li><a href="#" class="">Check Admission Status</a></li>
+            <li><a href="#" class="">Activate Late Reg. Payment</a></li>
+            <li><a href="#" class="">Update Biodata Information</a></li>
+            <li><a href="#" class="">Register Courses</a></li>
+            <li><a href="#" class="">Complete Health Centre Form</a></li>
+            <li><a href="#" class="">View Semester Raw Score</a></li>
+            <li><a href="#" class="">Check Result</a></li>
+            <li><a href="#" class="">Check Messages</a></li>
+
+            <li>
+            	<a href="#" class="">Bedspace Request <span class="fas fa-chevron-right pull-right"></span></a>
+							<ul id="drop" class="drop">
+								<li><a href="#">Information on Accomodation</a></li>
+								<li><a href="#">Freshers Bedspace request</a></li>
+								<li><a href="#">Year 2 Bedspace Request</a></li>
+								<li><a href="#">Year 3 Bedspace Request</a></li>
+								<li><a href="#">Final Year Bedspace Request</a></li>
+							</ul>
+            </li>
+
+            <li>
+            	<a href="#" class="">Reports <span class="fas fa-chevron-right pull-right"></span></a>
+            	<ul id="drop" class="drop">
+            		<li><a href="#">Basic Rules/Regulations in Halls of Residence</a></li>
+								<li><a href="#">Accommodation Agreement Form</a></li>
+								<li><a href="#">Bedspace Clearance</a></li>
+								<li><a href="#">Course Registration</a></li>
+								<li><a href="#">Clearance Certificate</a></li>
+            	</ul>
+            </li>
+
+            <li>
+            	<a href="#" class="">Documentations <span class="fas fa-chevron-right pull-right"></span></a>
+            	<ul id="drop" class="drop">
+            		<li><a href="#">Registration Infomation and Fees Breakdown</a></li>
+            	</ul>
+            </li>
+
+            <li><a href="#" class="">Contact Councellor</a></li>
+            <li><a href="#" class="">Change Password</a></li>
+            <li><a href="login.html" class="">Sign out</a></li>
+					</ul> -->
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+	<!-- page content -->
+	<section id="home">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-8 col-sm-8 col-xs-12" style="padding-right: 0px;padding-left: 0px;">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="2000">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					  </ol>
+
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" role="listbox">
+					  	<div class="item active" style="width: 100%;height: 400px !important;overflow: hidden;">
+					      <img src="img/campus-gate.jpg" alt="..." style="width: 100%;height: 400px;">
+					      <div class="carousel-caption" style="background-color: black;color:white;">
+							    <h4>Obafemi Awolowo University</h4>
+							  </div>
+					    </div>
+					    <div class="item">
+					      <a href="profile.html" style="width: 100%;height: 400px !important;overflow: hidden;">
+					      	<img src="img/admin.jpg" alt="..." style="width: 100%;height: 400px;">
+					      <div class="carousel-caption" style="background-color: black;color:white;">
+							    <h4>Faculty of Administration</h4>
+							  </div>
+					      </a>
+					    </div>
+					    <div class="item" style="width: 100%;height: 400px !important;overflow: hidden;">
+					      <img src="img/ajose.jpg" alt="..." style="width: 100%;height: 400px;">
+					      <div class="carousel-caption" style="background-color: black;color:white;">
+							    <h4>Faculty of Agriculture</h4>
+							  </div>
+					    </div>
+
+					  	<!-- Controls -->
+					  	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					  	 	 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					  	 	 <!-- <span class="fas fa-chevron-left"></span> -->
+					  	  	<span class="sr-only">Previous</span>
+					  	</a>
+					  	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    	<!-- <span class="fas fa-chevron-right"></span> -->
+					    	<span class="sr-only">Next</span>
+					  	</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-4 col-xs-12" style="padding-right: 0px;padding-left: 0px;">
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title sub-title">Important Information</h3>
+					  </div>
+					  <div class="panel-body" style="height: 350px;overflow-y: scroll;padding: 10px;">
+					    <p>2016/2017 RESUMPTION AND PAYMENT GUIDELINES</p>
+					    <a>2016/2017 RESUMPTION AND PAYMENT GUIDELINES. Click to view...</a>
+
+							<p>2016/2017 ONLINE APPLICATION FOR CHANGE OF COURSE</p>
+						  <a href="#">2016/2017 ONLINE APPLICATION FOR CHANGE OF COURSE. Click to proceed...</a>
+
+						  <p>2015/2016 RAIN SEMESTER LATE REGISTRATION ACTIVATION</p>
+						  <a href="#">2015/2016 Rain Semester Late Registration opened Monday 19th December, 2016.</a>
+
+						  <p>ONLINE COVOCATION REGISTRATION AND PAYMENT</p>
+						  <a href="#">ALL GRADUATING STUDENTS ARE REQUIRED TO REGISTER AND PAY ONLINE FOR 2016 CONVOCATION .Click to start ... Thank you.</a>
+
+						  <p>PROCEDURE FOR PAYMENT (Via REMITA)</p>
+						  <a href="#">From 2015/2016, from OAU EPORTAL, download R</a>
+					  </div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="" style="background-color: #dedede;">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<h3 class="sub-title">Undergraduate</h3>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="">Stalites(Returning Students) Login</a></li>
+						<li class="list-group-item"><a href="">2017/2018 SESSION POSTPONED</a></li>
+						<li class="list-group-item"><a href="">2018 Newly Admitted Student Login</a></li>
+						<li class="list-group-item"><a href="">Check 2018 Admission Status</a></li>
+						<li class="list-group-item"><a href="">Halls of Residence</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<h3 class="sub-title">Important Notice</h3>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="">MBA Executive Login</a></li>
+						<li class="list-group-item"><a href="">Application For PG Accomodation (2016/2017)</a></li>
+						<li class="list-group-item"><a href="">RAIN SEMESTER, 2016/2017 SESSION REGISTRATION.</a></li>
+						<li class="list-group-item"><a href="">Additional Useful Information at the Computer Centre Web Site</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<h3 class="sub-title">Other Links</h3>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="">Staff Login</a></li>
+						<li class="list-group-item"><a href="">Computer Training Prog. (EDP & DCT)</a></li>
+						<li class="list-group-item"><a href="">ONLINE CONVOCATION REGISTRATION</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+	<section id="be_footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-6">
+          <ul class="">
+            <li class=""><a href="#">Privacy Statement</a></li>
+            <li class=""><a href="#">Terms and Conditions of Use</a></li>
+            <li class=""><a href="#">Legal Notice</a></li>
+            <li class=""><a href="#">FAQ</a></li>
+            <li class=""><a href="#">Leture Time Table</a></li>
+        </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-6">
+          <ul class="">
+            <li class=""><a href="#">Examination Time Table</a></li>
+            <li class=""><a href="#">Contact Us</a></li>
+            <li class=""><a href="#">Student Help</a></li>
+            <li class=""><a href="#">Staff Help</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <a href="#paymentoptions"><img src="img/remita-payment-logo.png" alt="Payment Options" class="img-responsive"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <span class="footer"><i class="far fa-copyright"></i> 2006 - 2018 Obafemi Awolowo University</span>
+        </div>
+      </div>
+    </div>
+  </footer>	
+</body>
+</html>

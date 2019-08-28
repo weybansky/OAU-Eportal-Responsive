@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Obafemi Awolowo university Portal - Home</title>
+
+  <!-- Styleheets -->
+  <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<link rel="icon" href="img/oaulogo.png" type="image/png" sizes="16x16">
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row desktop">
+				<div class="col-md-2 col-sm-2">
+					<img src="img/oaulogo.png" alt="OAU LOGO" class="logo">
+				</div>
+				<div class="col-md-10 col-sm-10">
+					<span class="sitename">
+						Obafemi Awolowo University Student
+						<br>
+						Information Portal
+					</span>
+				</div>
+			</div>
+
+			<div class="row mobile">
+				<div class="col-xs-12">
+					<a role="button" href="#menu" onclick="open_menu()" class="btn pull-left btn-primary">
+						<i class="fas fa-bars"></i>
+					</a>
+					
+					<ul class="pull-right">
+						<li><a role="button" href="login.html" class="btn btn-warning">Login</a></li>
+					</ul>
+					
+					<div>
+						<a href="home.html">
+							<img src="img/oaulogo.png" alt="" class="">
+							<span class="sitename">OAU 
+								<!-- <small><small>Information Portal</small></small> -->
+							</span>
+						</a>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="desktop navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="home.html">Home</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Students <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="login.html">Undergraduate</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="login.html">Postgraduate</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="login.html">Executive MBA</a></li>
+	          </ul>
+	        </li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staff <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="login.html">Staff Login</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Bursary</a></li>
+	          </ul>
+	        </li>
+	        <li><a href="">FAQs</a></li>
+	        <li><a href="">Contact Us</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome guest <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <!-- <li role="separator" class="divider"></li> -->
+	            <!-- This is displayed when not logged in -->
+	            <li><a href="#">Login</a></li>
+	            <!-- This is displayed when logged in -->
+	            <!-- <li><a href="#">Sign Out</a></li> -->
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	
+	<nav id="mobile_menu" class="mobile">
+		<div class="container">
+			<div class="row">
+				<div class="">
+					<p class="nav_top">
+						<span">Menu</span>
+						<span class="close_button">
+							<a href="#" onclick="close_mobile_menu()">
+								<i class="fas fa-times"></i>
+							</a>
+						</span>
+					</p>
+					<!-- this is displayed when not logged in -->
+					<ul class="links logged_out">
+						<li><a href="home.html">Home</a></li>
+						<li>
+            	<a href="#" class="" onclick="drop_menu()">Students <span class="fas fa-chevron-right pull-right"></span></a>
+							<ul id="drop" class="drop">
+								<li><a href="login.html">Undergraduate</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="login.html">Postgraduate</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="login.html">Executive MBA</a></li>
+							</ul>
+            </li>
+            <li>
+            	<a href="#" class="" onclick="drop_menu()">Staff <span class="fas fa-chevron-right pull-right"></span></a>
+							<ul id="drop" class="drop">
+								<li><a href="">Payment via Remita</a></li>
+								<li><a href="">View Payment Status</a></li>
+								<li><a href="">Download Payment Slip for Cash Office</a></li>
+							</ul>
+            </li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+
+            <li class="login"><a href="login.html">Login <i class="fas fa-sign-in-alt"></i></a></li>
+					</ul>
+
+					<!-- This is displayed when logged in -->
+					<ul class="links logged_in">
+						<li><a href="profile.html" class="">Profile Page</a></li>
+            <li><a href="#" class="">Health Centre Registration</a></li>
+            <li><a href="#">Teaching Assessment</a></li>
+            
+            <li>
+            	<a href="#" class="" onclick="drop_menu()">Payment Activities <span class="fas fa-chevron-right pull-right"></span></a>
+							<ul id="drop" class="drop">
+								<li><a href="">Payment via Remita</a></li>
+								<li><a href="">View Payment Status</a></li>
+								<li><a href="">Download Payment Slip for Cash Office</a></li>
+							</ul>
+            </li>
+            
+            <li><a href="#" class="">Complete Certificate Form</a></li>
+            <li><a href="#" class="">Online Screening</a></li>
+            <li><a href="#" class="">Check Admission Status</a></li>
+            <li><a href="#" class="">Activate Late Reg. Payment</a></li>
+            <li><a href="#" class="">Update Biodata Information</a></li>
+            <li><a href="#" class="">Register Courses</a></li>
+            <li><a href="#" class="">Complete Health Centre Form</a></li>
+            <li><a href="#" class="">View Semester Raw Score</a></li>
+            <li><a href="#" class="">Check Result</a></li>
+            <li><a href="#" class="">Check Messages</a></li>
+
+            <li>
+            	<a href="#" class="">Bedspace Request <span class="fas fa-chevron-right pull-right"></span></a>
+							<ul id="drop" class="drop">
+								<li><a href="#">Information on Accomodation</a></li>
+								<li><a href="#">Freshers Bedspace request</a></li>
+								<li><a href="#">Year 2 Bedspace Request</a></li>
+								<li><a href="#">Year 3 Bedspace Request</a></li>
+								<li><a href="#">Final Year Bedspace Request</a></li>
+							</ul>
+            </li>
+
+            <li>
+            	<a href="#" class="">Reports <span class="fas fa-chevron-right pull-right"></span></a>
+            	<ul id="drop" class="drop">
+            		<li><a href="#">Basic Rules/Regulations in Halls of Residence</a></li>
+								<li><a href="#">Accommodation Agreement Form</a></li>
+								<li><a href="#">Bedspace Clearance</a></li>
+								<li><a href="#">Course Registration</a></li>
+								<li><a href="#">Clearance Certificate</a></li>
+            	</ul>
+            </li>
+
+            <li>
+            	<a href="#" class="">Documentations <span class="fas fa-chevron-right pull-right"></span></a>
+            	<ul id="drop" class="drop">
+            		<li><a href="#">Registration Infomation and Fees Breakdown</a></li>
+            	</ul>
+            </li>
+
+            <li><a href="#" class="">Contact Councellor</a></li>
+            <li><a href="#" class="">Change Password</a></li>
+            <li><a href="login.html" class="">Sign out</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	<section id="login_page">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+					<h3 class="text-center">STUDENT MEDICAL ENTRANCE FORM</h3>
+
+					<form class="form-horizontal" method="POST" action="profile.html" name="biodata">
+						<div class="form-group">
+					    <label class="col-md-12 col-sm-12 col-xs-12" for="title">Bio-Data</label>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">UTME No:</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="umepdp" type="text" id="umepdp" value="48018488BC">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Matric No:</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="regno" type="text" id="regno" value="EEG/2014/063">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Health Centre No:</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="hcno" type="text" value="S2014/3931" placeholder="(New Sudents: Enter NIL)">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Title:</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <select class="form-control" name="title" id="title">
+						      <option value="MISS" 	selected="selected">MISS</option>
+						      <option value="MR" selected="selected">MR</option>
+						      <option value="DR" selected="selected">DR</option>
+						      <option value="MRS" selected="selected">MRS</option>
+						      <option value="MR" selected="selected">MR</option>
+					      </select>
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Other Names</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="othername" type="text" id="othername" value="NASIR ABDULWAHAB OPEYEMI">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Hall Address</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="halladdr" type="text" id="halladdr" value="NIL">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Home Address</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="homeadd" type="text" id="homeadd" value="OGO OLUWANTAN, OKESOKUN QUARTERS OFF NTA ROAD, MOKURO, ILE IFE">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Tribe</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="tribe" type="text" id="tribe" value="YORUBA">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">State</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="state" type="text" id="state" value="OSUN">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Place of Origin</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="place" type="text" id="place" value="IWO">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Country</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="nation" type="text" id="nation" value="NIGERIA">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Religion/Denomination</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="reldenom" type="text" id="reldenom" value="ISLAM">
+					    </div>
+						</div>
+           	<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Sex</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <select class="form-control" name="sex" id="sex">
+					      	<option value="Male" selected="selected">Male</option>
+					      	<option value="Female">Female</option>
+					      	<option value="Male" selected="selected">Male</option>
+					    	</select>
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Marital Status</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <select class="form-control" name="mstatus" id="mstatus">
+						      <option value="Single" selected="selected">Single</option>
+						      <option value="Married">Married</option>
+						      <option value="Single" selected="selected">Single</option>
+					    </select>
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Mobile Number</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="phone" type="text" id="phone" value="08147638236" maxlength="11">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Faculty</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="faculty" type="text" id="faculty" value="Technology">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Department</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="dept" type="text" id="dept" value="Elect. &amp; Elect. Engineering">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Birthdate</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="birthdate" type="text" id="birthdate" value="24/11/1997" maxlength="10">
+					    &nbsp;dd/mm/yyyy
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Class</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <select class="form-control" name="class" id="class">
+					      	<option value="Undergraduate" selected="selected">Undergraduate</option>
+					      	<option value="Graduate">Graduate</option>
+					      	<option value="Undergraduate" selected="selected">Undergraduate</option>
+					    	</select>
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-12 col-sm-12 col-xs-12" for="title">Next of Kin: Parent/Guardian</label>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Name</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="pgname" type="text" id="pgname" value="MRS M I NASIR">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Address</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="pgaddress" type="text" id="pgaddress" value="COMPUTER CENTER, OAU ILE IFE">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Relationship</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <select class="form-control" name="pgrelation" id="pgrelation">
+						      <option value="Spouse" selected="selected">Spouse</option>
+						      <option value="Parents" selected="selected">Parents</option>
+						      <option value="Sister" selected="selected">Sister</option>
+						      <option value="Brother" selected="selected">Brother</option>
+						      <option value="Cousin" selected="selected">Cousin</option>
+						      <option value="Guardian" selected="selected">Guardian</option>
+						      <option value="Parents" selected="selected">Parents</option>
+					      </select>
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Contact Number</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="pgphone" type="text" id="pgphone" value="08037886128">
+					    </div>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-12 col-sm-12 col-xs-12" for="title">Access (this guarantees your continuous access to updating registration information)</label>
+						</div>
+						<div class="form-group">
+					    <label class="col-md-3 col-sm-2 col-xs-12" for="title">Username</label>
+					    <div class="col-md-9 col-sm-10 col-xs-12">
+					      <input class="form-control" name="username" type="text" id="username" value="EEG/2014/063">
+					    </div>
+						</div>
+
+            <div class="form-group">
+            	<div class="col-md-offset-3 col-sm-offset-2 col-xs-offset-4">
+            		<button type="submit" class="btn btn-warning" name="button">Submit</button>
+            	</div>
+            </div>
+					  <input type="hidden" value="biodata">
+          </form> 
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<footer class="funny_footer">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <span class="footer"><i class="far fa-copyright"></i> 2006 - 2018 Obafemi Awolowo University</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

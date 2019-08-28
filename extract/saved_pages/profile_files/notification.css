@@ -1,0 +1,33 @@
+div.info {
+	background-color: #E6F4F7; 
+	padding: 15px; 
+	font-family: Verdana, san-serif, marvel;
+	font-size: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    color: #000;
+	
+}
+
+div.info h4{
+	font-size: 16px;
+	padding-top: 0px;
+	font-family: Verdana, sans-serif, marvel;
+	color:#000;
+	padding-left: 10px;
+}
+
+div.info p{
+	padding: 0px;
+	margin:0px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+div.info ul{
+	padding-left: 30px;
+}
+
+ul.roman{
+	list-style-type: lower-roman;
+}
